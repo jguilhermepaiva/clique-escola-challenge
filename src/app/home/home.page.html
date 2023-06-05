@@ -1,20 +1,201 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="false" style="max-width: 400px; max-height: 695px;">
+  <div class="header">
+    <ion-grid >
+        <ion-row class="ion-text-left ion-align-items-center" style="justify-content: space-between; margin:5px;">
+            <ion-col size="6">
+              <img src="./assets/img/home/logo.svg" alt="Logo" style="width:133px; cursor: pointer;">
+            </ion-col>
+            <ion-col size="4">
+              <ion-row>
+                  <ion-col size="4">
+                    <img src="./assets/img/home/plus.svg" alt="Logo" style="cursor: pointer;">
+                  </ion-col>
+                  <ion-col size="4">
+                    <img src="./assets/img/home/heart.svg" alt="Logo" style="cursor: pointer;">
+                  </ion-col>
+                  <ion-col size="4">
+                    <img src="./assets/img/home/bell.png" alt="Logo" style="cursor: pointer;">
+                  </ion-col>
+              </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <div class="input-style">
+      <img src="./assets/img/home/lupa.svg" alt="Logo" style="margin-left: 19px; margin-right:10px">
+      <ion-input
+      class="custom"
+      placeholder="Consulte os dados de uma escola"
+    ></ion-input>
+    </div>
   </div>
+
+    <div style="margin:10px; ">
+      <swiper-container class="mySwiper" pagination="false"  slides-per-view="3.1"
+    space-between="5" free-mode="false"  >
+    <swiper-slide>
+      <div style="border-radius: 8px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);  width: 105px; max-height: 96px; min-height: 96px; padding: 10px 13px; cursor: pointer;" [routerLink]="['/financeiro']" >
+        <img src="./assets/img/home/$.svg" alt="Logo" style="max-width: 20px;">
+        <p style="font-size: 12px; font-weight:700; font-family:Raleway; text-align: left;">Financeiro da minha escola</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div style="border-radius: 8px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);  width: 105px; max-height: 96px; min-height: 96px; padding: 10px 13px; cursor: pointer;" [routerLink]="['/proxima']">
+        <img src="./assets/img/home/hat.svg" alt="Logo" style="max-width: 38px;">
+        <p style="font-size: 12px; font-weight:700; font-family:Raleway; text-align: left;">Escolas próximas</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div style="border-radius: 8px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);   width: 105px; max-height: 96px; min-height: 96px; padding: 10px 13px; cursor: pointer;">
+        <img src="./assets/img/home/cruz.svg" alt="Logo" style="max-width: 32px;">
+        <p style="font-size: 12px; font-weight:700; font-family:Raleway; text-align: left;">Curtidos <br/> do app</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div style="border-radius: 8px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);   width: 105px; max-height: 96px; min-height: 96px; padding: 10px 13px; cursor: pointer;">
+        <img src="./assets/img/home/ballStar.svg" alt="Logo" style="max-width: 32px;">
+        <p style="font-size: 12px; font-weight:700; font-family:Raleway; text-align: left;">Projetos Sugerido</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+    </div>
+
+  <div style="display: flex; align-items: center; border-radius: 8px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); max-height: 64px;  min-height: 64px; padding: 10px 16px; margin: 8px 20px; cursor: pointer;" [routerLink]="['/busca']">
+      <img  src="./assets/img/home/graph.svg" alt="Logo"  >
+      <p style="font-size: 16px; font-weight:600; font-family:Raleway; text-align: left; margin: 8px; cursor: pointer;">Consulte os dados   <br/>     das Redes de Ensino</p>
+    </div>
+
+    <h2 style="font-weight:700; font-size:16px; color: #3C3C3F; margin-left:16px; margin-bottom: -6px; font-family:Raleway;">Projetos mais vistos do Brasil</h2>
+
+
+    <div style="max-height: 136px; padding: 5px; margin-bottom: 40px;">
+      <swiper-container class="mySecondSwiper" pagination="true" pagination-clickable="true" space-between="10"
+      slides-per-view="1.08">
+      <swiper-slide>
+        <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
+          <img src="./assets/img/home/img1.png" alt="Logo" style="max-width: 93px; ">
+          <div>
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px">
+              <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 0">Eu curto cidadania</p>
+              <img src="./assets/img/home/heart.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 3%;">
+            </div>
+            <p class="gradient" style="font-size: 12px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Por meio de conteúdos teóricos e atividades práticas, ele promete levar conhecimento sobre cidadania em... </p>
+
+            <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 5px">
+              <img src="./assets/img/home/human.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 40%;">
+              <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 0 0; color:#616167; font-size:12px;font-weight:600;">12</p>
+              <img src="./assets/img/home/comment.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 3px 0; color:#616167; font-size:12px;  font-weight:600">5</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
+          <img src="./assets/img/home/img2.png" alt="Logo" style="max-width: 93px; ">
+          <div>
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px">
+              <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 0">Geladeira Literária</p>
+              <img src="./assets/img/home/heart.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 3%;">
+            </div>
+            <p class="gradient" style="font-size: 12px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">O projeto consiste na criação de uma geladeira na escola, na qual os alunos poderão colocar e retirar livros para compartilhar co...</p>
+
+            <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 5px">
+              <img src="./assets/img/home/global.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 40%;">
+              <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 0 0; color:#616167; font-size:12px;font-weight:600;">324</p>
+              <img src="./assets/img/home/comment.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 3px 0; color:#616167; font-size:12px;  font-weight:600">104</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
+          <img src="./assets/img/home/img3.png" alt="Logo" style="max-width: 93px; ">
+          <div>
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px">
+              <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 0">Delivery de Livros</p>
+              <img src="./assets/img/home/heart.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 3%;">
+            </div>
+            <p class="gradient" style="font-size: 12px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">O projeto surgiu em meio a pandemia da Covid 19. O corpo docente junto com a direção, se inspirando no...</p>
+
+            <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 5px">
+              <img src="./assets/img/home/global.svg" alt="Logo" style="cursor:pointer; width: 16px; margin-right: 40%;">
+              <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 0 0; color:#616167; font-size:12px;font-weight:600;">34</p>
+              <img src="./assets/img/home/comment.svg" alt="Logo" style="cursor:pointer; width: 16px; margin:2px">
+              <p style="margin: 0 16px 3px 0; color:#616167; font-size:12px;  font-weight:600">94</p>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+    </div>
+
+    <h2 style="font-weight:700; font-size:16px; color: #3C3C3F; margin-left:16px; font-family:Raleway; margin-bottom: -8px;">Notícias</h2>
+
+    <div style="max-height: 136px; padding: 5px; margin-bottom: 40px;">
+      <swiper-container class="mySecondSwiper" pagination="true" pagination-clickable="true" space-between="10"
+      slides-per-view="1.08">
+      <swiper-slide>
+        <div class="slide3-1" style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%; ">
+          <div  >
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px; margin-top: 15%;">
+              <p style="font-size: 14px; font-weight:700; font-family:Raleway; text-align: left; color:#FBFDFF; margin:10px 0">Censo Escolar</p>
+            </div>
+            <p  style="font-size: 16px; font-weight:600; font-family:Raleway; text-align: left; margin: 0 5px;  padding: 0 8px; color: #FBFDFF">Coleta da 2ª etapa do Censo Escolar 2022 terminará no dia 17/03</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide3-2" style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%; ">
+          <div  >
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px; margin-top: 15%;">
+              <p style="font-size: 14px; font-weight:700; font-family:Raleway; text-align: left; color:#FBFDFF; margin:10px 0">Fies</p>
+            </div>
+            <p  style="font-size: 16px; font-weight:600; font-family:Raleway; text-align: left; margin: 0 5px;  padding: 0 8px; color: #FBFDFF">Para o Fies, candidato deve confirmar a conclusão de sua inscrição</p>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="slide3-3" style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%; ">
+          <div  >
+            <div style="display: flex; align-items:center; justify-content: space-between; width: 225px; padding: 0 13px; margin-top: 15%;">
+              <p style="font-size: 14px; font-weight:700; font-family:Raleway; text-align: left; color:#FBFDFF; margin:10px 0">EBSERH</p>
+            </div>
+            <p  style="font-size: 16px; font-weight:600; font-family:Raleway; text-align: left; margin: 0 5px;  padding: 0 8px; color: #FBFDFF">Arthur Chioro toma posse como presidente da Ebserh</p>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+    </div>
+
+
+
 </ion-content>
+
+<ion-toolbar style="max-width: 400px; border-top: 1px solid #B8B9BC">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home" style="color:#2670E8"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="search" style="color:#2670E8"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="library">
+        <ion-icon name="color-palette-outline" style="color:#2670E8"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="chatbox-outline" style="color:#2670E8"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <img src="./assets/img/home/person.svg" alt="Logo" style="cursor: pointer;">
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

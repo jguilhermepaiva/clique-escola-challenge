@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -9,5 +9,17 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'busca',
+    loadComponent: () => import('./pages/busca/busca.page').then( m => m.BuscaPage)
+  },
+  {
+    path: 'financeiro',
+    loadComponent: () => import('./pages/financeiro/financeiro.page').then( m => m.FinanceiroPage)
+  },
+  {
+    path: 'proxima',
+    loadComponent: () => import('./pages/proxima/proxima.page').then( m => m.ProximaPage)
   },
 ];
