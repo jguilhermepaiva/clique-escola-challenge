@@ -70,10 +70,10 @@
     <h2 style="font-weight:700; font-size:16px; color: #3C3C3F; margin-left:16px; margin-bottom: -6px; font-family:Raleway;">Projetos mais vistos do Brasil</h2>
 
 
-    <div style="max-height: 136px; padding: 5px; margin-bottom: 40px;">
+    <div style="max-height: 136px; padding: 5px; margin-bottom: 40px; "  >
       <swiper-container class="mySecondSwiper" pagination="true" pagination-clickable="true" space-between="10"
       slides-per-view="1.08">
-      <swiper-slide>
+      <swiper-slide [routerLink]="['/curtidas']">
         <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
           <img src="./assets/img/home/img1.png" alt="Logo" style="max-width: 93px; ">
           <div>
@@ -93,7 +93,7 @@
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide>
+      <swiper-slide [routerLink]="['/curtidas']">
         <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
           <img src="./assets/img/home/img2.png" alt="Logo" style="max-width: 93px; ">
           <div>
@@ -113,7 +113,7 @@
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide>
+      <swiper-slide [routerLink]="['/curtidas']">
         <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
           <img src="./assets/img/home/img3.png" alt="Logo" style="max-width: 93px; ">
           <div>

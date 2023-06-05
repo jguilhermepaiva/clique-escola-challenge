@@ -21,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'proxima',
     loadComponent: () => import('./pages/proxima/proxima.page').then( m => m.ProximaPage)
+  },  {
+    path: 'curtidas',
+    loadComponent: () => import('./pages/curtidas/curtidas.page').then( m => m.CurtidasPage)
   },
+
 ];
