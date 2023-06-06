@@ -3,19 +3,25 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-curtidas',
   templateUrl: './curtidas.page.html',
   styleUrls: ['./curtidas.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
+  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CurtidasPage implements OnInit {
-
+  public selectedSegment: string ='Colaboração'
   constructor() { }
 
   ngOnInit() {
+  }
+  segmentChanged(event: any) {
+    console.log(event.target.value);
+    this.selectedSegment = event.target.value
   }
 
 }

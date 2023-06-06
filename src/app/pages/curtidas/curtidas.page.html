@@ -7,5 +7,162 @@
 
     </ion-row>
 </ion-grid>
+<ion-toolbar>
+  <ion-segment style="width: 75%; margin-left:5%;"  value="Colaboração" (ionChange)="segmentChanged($event)">
+    <ion-segment-button class="segmentButton" value="Colaboração">
+      <ion-label style=" max-height: 32px;">Colaboração</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="segmentButton" value="Projetos">
+      <ion-label>Projetos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-card style="box-shadow:none;"  *ngIf="selectedSegment === 'Colaboração'">
+  <div style="padding: 5px;">
+    <div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer;">
+        <img src="./assets/img/curtidas/img1.png" alt="Logo" >
+        <div>
+            <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 12px 5px 7px;  width: 90%;  padding: 0 8px;">Equidade</p>
+          <p  style="font-size: 14px; font-weight:600; font-family:Raleway; color:#8C8D95 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Escola Municipal Pilarzinho</p>
+          <p class="gradient" style="font-size: 12px; font-weight:400;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Para cada escola, uma estratégia diferenciada, definida pelos próprios profissionais da unidade.</p>
+        </div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer; ">
+      <div>
+        <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 12px 5px 7px;  width: 90%;  padding: 0 8px;">Água Limpa</p>
+      <p  style="font-size: 14px; font-weight:600; font-family:Raleway; color:#8C8D95 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Escola Municipal Luiz Gonzaga</p>
+      <p class="gradient" style="font-size: 12px; font-weight:400;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">O projeto que leva água limpa às famílias ribeirinhas, que não tinham acesso às redes de esgoto e de água...</p>
+    </div>
+      <img src="./assets/img/curtidas/img2.png" alt="Logo"  >
+  </div>
+
+  <div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer; ">
+    <img src="./assets/img/curtidas/img3.png" alt="Logo"  >
+    <div>
+        <p style="font-size: 16px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 12px 5px 7px;  width: 90%;  padding: 0 8px;">Eu curto cidadania</p>
+      <p  style="font-size: 13px; font-weight:600; font-family:Raleway; color:#8C8D95 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Escola Municipal Dora Tomich Laender</p>
+      <p class="gradient" style="font-size: 12px; font-weight:400;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Por meio de conteúdos teóricos e atividades práticas, leva conhecimento sobre ...</p>
+    </div>
+  </div>
+</div>
+  <div style="background:#D9E3F3; height:32px; display: flex; align-items: center; margin:10px auto; width:120%; ">
+    <h2 style="font-weight:700; font-size:16px; color: #3C3C3F; margin-left:20px; font-family:Raleway;"> Novidades curtidas rapidamente</h2>
+  </div>
+  <div style="max-height: 136px; padding: 5px; margin-bottom: 40px;">
+    <swiper-container class="mySecondSwiper" pagination="false"  space-between="10"
+    slides-per-view="1.45" >
+    <swiper-slide style="padding:5px;">
+      <div class="slide3-1" style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px;  ">
+      </div>
+    </swiper-slide>
+    <swiper-slide style="padding:5px;">
+      <div class="slide3-2" style="display: flex; border-radius:20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px;  ">
+
+      </div>
+    </swiper-slide>
+    <swiper-slide style="padding:5px;">
+      <div class="slide3-3" style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%; ">
+
+      </div>
+    </swiper-slide>
+  </swiper-container>
+  </div>
+</ion-card>
+<ion-card style="box-shadow:none;"   *ngIf="selectedSegment === 'Projetos'">
+  <div style="padding: 5px;">
+  <div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer; ">
+    <img src="./assets/img/curtidas/img4.png" alt="Logo"  >
+    <div>
+        <p class="gradient" style="font-size: 14px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 16px 5px 25px;  width: 95%;  padding: 0 8px;">Quais as alternativas para aumentar engajamento dos alunos nas aulas?</p>
+      <p  style="font-size: 10px; font-weight:500; font-family:Raleway; color:#616167 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Ana Costa</p>
+      <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Escola de Referência em Ensino Médio Ernesto Silva </p>
+    </div>
+</div>
+
+<div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer; ">
+  <div>
+      <p class="gradient" style="font-size: 13px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 14px 5px 14px;  width: 95%;  padding: 0 8px;">Como podemos atualizar às pendências referentes a prestação de contas dos recursos do PDDE?</p>
+    <p  style="font-size: 10px; font-weight:500; font-family:Raleway; color:#616167 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Arnaldo Santos</p>
+    <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Escola Técnica Estadual Professor Lucilo Ávila Pessoa</p>
+  </div>
+  <img src="./assets/img/curtidas/img5.png" alt="Logo"  >
+
+</div>
+
+<div style="display: flex; margin-bottom: 16px; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35); cursor: pointer; ">
+  <img src="./assets/img/curtidas/img6.png" alt="Logo"  >
+  <div>
+      <p class="gradient" style="font-size: 14px; font-weight:700; font-family:Raleway; text-align: left; color:#3C3C3F; margin: 16px 5px 20px;  width: 92%;  padding: 0 8px;">Quando serão ofertados novos cursos de formação continuada para os ...</p>
+    <p  style="font-size: 10px; font-weight:500; font-family:Raleway; color:#616167 ; text-align: left; margin: 0 5px 6px;  width: 90%; padding: 0 8px">Bernadete Ferreira</p>
+    <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left; margin: 0 5px;  width: 90%; padding: 0 8px">Escola de Referência em Ensino Agamenon Magalhães</p>
+  </div>
+</div>
+</div>
+<div style="background:#D9E3F3; height:32px; display: flex; align-items: center; margin:10px auto; width:120%; ">
+  <h2 style="font-weight:700; font-size:16px; color: #3C3C3F; margin-left:20px; font-family:Raleway;"> Novidades curtidas rapidamente</h2>
+</div>
+<div style="max-height: 136px; padding: 5px; margin-bottom: 40px; "  >
+  <swiper-container class="mySecondSwiper" pagination="false" space-between="10"
+  slides-per-view="1.5">
+  <swiper-slide style="padding: 5px;">
+    <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%;">
+      <div>
+        <div style="display: flex; align-items:center; justify-content: space-between; padding: 0 13px">
+          <p style="font-size: 11.5px; font-weight:600; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 25px 25px 5px ">Fizemos uma horta escolar como projeto em nossa escola e foi muito significativo!</p>
+        </div>
+        <p  style="font-size: 10px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 10px;  width: 90%; padding: 0 8px; color:#616167">Arnaldo Santos</p>
+
+        <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 0 5px">
+          <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left;   width: 90%;">Escola de Referência em Ensino Médio Ernesto Silva </p>
+          <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 20px; margin:5px">
+          <p style="margin: 5px 16px 0 0; color:#616167; font-size:12px;font-weight:600;">65</p>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+  <swiper-slide style="padding: 5px;">
+    <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%">
+      <div>
+        <div style="display: flex; align-items:center; justify-content: space-between; padding: 0 13px">
+          <p style="font-size: 11.3px; font-weight:600; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 25px 20px 5px">Estamos pensando em fazer uma campanha de conscientização sobre o meio ambiente.</p>
+        </div>
+        <p  style="font-size: 10px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 10px;  width: 90%; padding: 0 8px; color:#616167">Bernadete Ferreira</p>
+
+        <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 0 5px">
+          <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left;   width: 90%;">Escola de Referência em Ensino Agamenon Magalhães</p>
+          <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 20px; margin:5px">
+          <p style="margin: 5px 16px 0 0; color:#616167; font-size:12px;font-weight:600;">15</p>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+  <swiper-slide style="padding: 5px;">
+    <div style="display: flex; border-radius: 20px; box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);cursor: pointer; height: 136px; width: 98%;">
+      <div>
+        <div style="display: flex; align-items:center; justify-content: space-between; padding: 0 13px">
+          <p style="font-size: 11.5px; font-weight:600; font-family:Raleway; text-align: left; color:#3C3C3F; margin:10px 25px 25px 5px ">Fizemos uma horta escolar como projeto em nossa escola e foi muito significativo!</p>
+        </div>
+        <p  style="font-size: 10px; font-weight:400; font-family:Raleway; text-align: left; margin: 0 10px;  width: 90%; padding: 0 8px; color:#616167">Arnaldo Santos</p>
+
+        <div style="display: flex; align-items:center; width: 225px; padding: 0 13px; margin: 0 5px">
+          <p style="font-size: 10px; font-weight:400; color:#B8B9BC;  font-family:Raleway; text-align: left;   width: 90%;">Escola de Referência em Ensino Médio Ernesto Silva </p>
+          <img src="./assets/img/home/like.svg" alt="Logo" style="cursor:pointer; width: 20px; margin:5px">
+          <p style="margin: 5px 16px 0 0; color:#616167; font-size:12px;font-weight:600;">100</p>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+</swiper-container>
+</div>
+</ion-card>
+
+
+
+
+
+
+
 
   </ion-content>

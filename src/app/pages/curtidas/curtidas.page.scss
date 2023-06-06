@@ -1,0 +1,51 @@
+
+
+ion-segment-button {
+  background-color: #D9E3F3;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 0px solid #1351B4;
+  max-height: 32px;
+  margin: 5px;
+  font-family: 'Raleway';
+  font-weight: 600;
+  font-size: 16px;
+  color: #1351B4;
+  font-style: normal;
+  text-transform: capitalize;
+  --indicator-height: 0px;
+  height: 32px;
+  min-height: 32px;
+
+}
+.segment-button-checked ::ng-deep{
+  background-color: #FBFDFF;
+  border: 1px solid #1351B4;
+
+}
+
+.gradient {
+  background: linear-gradient(180deg, #3C3C3F 0%, rgba(60, 60, 63, 0) 108.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+// ./assets/img/curtidas/img4.png
+
+.slide3-1{
+  background-image: url("../../../assets/img/curtidas/img7.png");
+}
+.slide3-2{
+  background-image: url("../../../assets/img/curtidas/img8.png");
+}
+
+.slide3-3{
+  background-image: url("../../../assets/img/curtidas/img9.png");
+}
+.mySecondSwiper{
+  padding-bottom: 20px;
+
+}

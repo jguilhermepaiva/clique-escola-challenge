@@ -9,7 +9,9 @@ import { RouterLinkWithHref } from '@angular/router';
   templateUrl: './proxima.page.html',
   styleUrls: ['./proxima.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
+  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref],
+
+
 })
 export class ProximaPage implements OnInit {
   public isDisplayed: boolean = false;
