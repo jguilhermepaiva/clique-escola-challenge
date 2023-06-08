@@ -13,23 +13,23 @@
 
    constructor(private http: HttpClient) { }
 
-  //  createData() {
-  //    // Lógica para criar dados
-  //  }
+    createData() {
+      // Lógica para criar dados
+    }
 
-  //  readData() {
-  //   const url = `${this.api}forum/listar-post/`;
+    readData() {
+     const url = `${this.api}forum/listar-post/`;
 
-  //   // Creation of the authentication header
-  //   const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
+    // Creation of the authentication header
+    const headersCreated = new HttpHeaders({'Authorization':"650f67a8367c79cac06409b146bae07d"});
 
-  //   return this.http.get(url, { headers });
-  // }
-  //  updateData() {
-  //   //  Lógica para atualizar dados
-  //  }
+    return this.http.get(url, {headers:headersCreated});
+   }
+    updateData() {
+     //  Lógica para atualizar dados
+    }
 
-  //  deleteData() {
-  //   // Lógica para excluir dados
-  //  }
+    deleteData() {
+     // Lógica para excluir dados
+    }
  }

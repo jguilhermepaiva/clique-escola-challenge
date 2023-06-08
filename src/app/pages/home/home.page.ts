@@ -16,13 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 export class HomePage {
   constructor(private apiService: ApiService) {
     // this.createData();
-    //this.readData();
+    this.readData();
     // this.updateData();
     // this.deleteData();
   }
 
-  // readData(){
-  //   this.apiService.readData().subscribe(data => {
-  //     console.log(data);
-  // });
+     readData(){
+       this.apiService.readData().subscribe(data => {
+         console.log(data);
+     });
+  }
 }
