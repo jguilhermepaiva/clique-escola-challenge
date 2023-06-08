@@ -1,10 +1,9 @@
-import { ApiService } from './../services/api.service';
+import { ApiService } from '../../services/api.service';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-home',
@@ -22,9 +21,8 @@ export class HomePage {
     // this.deleteData();
   }
 
-    // readData(){
-    //   this.apiService.readData().subscribe(data => {
-    //     console.log(data);
-    // });
+  // readData(){
+  //   this.apiService.readData().subscribe(data => {
+  //     console.log(data);
+  // });
 }
-
