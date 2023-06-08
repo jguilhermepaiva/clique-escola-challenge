@@ -18,10 +18,10 @@
     }
 
     readData() {
-     const url = `${this.api}forum/listar-post/`;
+     const url = `/api/noticias/`;
 
     // Creation of the authentication header
-    const headersCreated = new HttpHeaders({'Authorization':"650f67a8367c79cac06409b146bae07d"});
+    const headersCreated = new HttpHeaders({'Authorization': this.token});
 
     return this.http.get(url, {headers:headersCreated});
    }
