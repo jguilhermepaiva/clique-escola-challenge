@@ -25,6 +25,10 @@ export const routes: Routes = [
   {
     path: 'curtidas',
     loadComponent: () => import('./pages/curtidas/curtidas.page').then( m => m.CurtidasPage)
+  },  {
+    path: 'noticia',
+    loadComponent: () => import('./pages/noticia/noticia.page').then( m => m.NoticiaPage)
   },
+
 
 ];

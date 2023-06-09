@@ -1,27 +1,23 @@
 import { ApiService } from '../../services/api.service';
-import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterLinkWithHref } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { RouterLinkWithHref } from '@angular/router';
 import { NoticiaService } from '../../noticia.service';
 
-
-
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-noticia',
+  templateUrl: './noticia.page.html',
+  styleUrls: ['./noticia.page.scss'],
   standalone: true,
-  imports: [IonicModule, RouterLinkWithHref, HttpClientModule, CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class HomePage {
+export class NoticiaPage implements OnInit {
   titleNoticias: string[] = [];
   descriptionNoticias: string[] = [];
   noticiaSelecionada: any;
-  combinedData: { title: string, noticia: any }[] = []; // Array combinado
+  noticias: string[] = [];
 
   constructor(private apiService: ApiService, private noticiaService: NoticiaService) {
     this.readDataNoticias();
@@ -31,14 +27,20 @@ export class HomePage {
     this.apiService.readDataNoticias().subscribe((data: any) => {
       this.titleNoticias = data.map((item: any) => item.title);
       this.descriptionNoticias = data.map((item: any) => item.description);
+      this.noticias = data
       this.noticiaSelecionada = data[0];
-      this.combinedData = this.titleNoticias.map((title, index) => ({ title, noticia: this.descriptionNoticias[index] }));
-
     });
   }
 
-  selecionarNoticia(noticia: any) {
-    this.noticiaService.selecionarNoticia(noticia);
+
+ selecionarNoticia(index: number) {
+  this.noticiaSelecionada = this.noticias[index];
+}
+
+  ngOnInit() {
+    this.noticiaService.noticiaSelecionada$.subscribe(noticia => {
+      this.noticiaSelecionada = noticia;
+    });
   }
 
 }

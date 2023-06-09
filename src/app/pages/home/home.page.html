@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="false" style="max-width: 400px; height: auto">
+<ion-content [fullscreen]="false" style=" height: auto">
   <div class="header">
     <ion-grid>
       <ion-row
@@ -559,6 +559,7 @@
           </div>
         </div>
       </swiper-slide>
+
     </swiper-container>
   </div>
 
@@ -577,56 +578,108 @@
 
   <div style="max-height: 136px; padding: 5px; margin-bottom: 40px">
     <swiper-container
-      class="mySecondSwiper"
+      class="mySecondSwiper "
       pagination="true"
       pagination-clickable="true"
       space-between="10"
-      slides-per-view="1.08"
+      slides-per-view="1.07"
+
     >
       <swiper-slide>
         <div
           style="
             display: flex;
             border-radius: 20px;
-            align-items: center;
-            justify-content: center;
             box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
             cursor: pointer;
             height: 136px;
             width: 98%;
+            overflow: hidden;
           "
+          [routerLink]="['/noticia']"
           *ngFor="let title of titleNoticias.slice(0, 1)"
 
         >
+        <img
+              src="../../../assets/img/home/brasil.png"
+              alt="Logo"
+              style="width: 115px; cursor: pointer; margin-left: -2%;"
+            />
+          <div >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                justify-content: start;
+
+                padding: 5px 13px;
+              "
+            >
+
+            <p
+              style="
+                font-size: 14px;
+                font-weight: 700;
+                font-family: Raleway;
+                text-align: left;
+                margin: 10px 5px 10px;
+                padding: 0 8px;
+                color: #3c3c3f;
+                width: 90%;
+              "
+            >
+              {{ title }}
+            </p>
+          </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          style="
+            display: flex;
+            border-radius: 20px;
+            box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
+            cursor: pointer;
+            height: 136px;
+            width: 98%;
+            overflow: hidden;
+          "
+          [routerLink]="['/noticia']"
+          *ngFor="let title of titleNoticias.slice(1, 2)"
+
+        >
+        <img
+              src="../../../assets/img/home/brasil.png"
+              alt="Logo"
+              style="width: 115px; cursor: pointer; margin-left: -2%;"
+            />
           <div>
             <div
               style="
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 225px;
+                align-items: start;
+                justify-content: start;
+
                 padding: 5px 13px;
               "
-            ></div>
-            <img
-              src="./assets/img/home/logo.svg"
-              alt="Logo"
-              style="width: 200px; cursor: pointer"
-            />
+            >
+
             <p
               style="
-                font-size: 16px;
-                font-weight: 600;
+                font-size: 14px;
+                font-weight: 700;
                 font-family: Raleway;
-                text-align: center;
+                text-align: left;
                 margin: 10px 5px 10px;
                 padding: 0 8px;
                 color: #3c3c3f;
+                width: 90%;
               "
             >
               {{ title }}
             </p>
-
+          </div>
           </div>
         </div>
       </swiper-slide>
@@ -635,97 +688,54 @@
           style="
             display: flex;
             border-radius: 20px;
-            align-items: center;
-            justify-content: center;
             box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
             cursor: pointer;
             height: 136px;
             width: 98%;
+            overflow: hidden;
           "
-          *ngFor="let title of titleNoticias.slice(1, 2)"
-        >
-          <div *ngFor="let guid of guidNoticias.slice(1, 2)" >
-            <div
-            style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 225px;
-            padding: 5px 13px;
-          "
-            ></div>
-            <img
-              src="./assets/img/home/logo.svg"
-              alt="Logo"
-              style="width: 200px; cursor: pointer"
-            />
-            <p
-              style="
-                font-size: 16px;
-                font-weight: 600;
-                font-family: Raleway;
-                text-align: center;
-                margin: 10px 5px 10px;
-                padding: 0 8px;
-                color: #3c3c3f;
-              "
-            >
-              {{ title }}
-            </p>
-
-
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div
-          style="
-            display: flex;
-            border-radius: 20px;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
-            cursor: pointer;
-            height: 136px;
-            width: 98%;
-          "
+          [routerLink]="['/noticia']"
           *ngFor="let title of titleNoticias.slice(2, 3)"
+
         >
-          <div>
-            <div
-            style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 225px;
-            padding: 5px 13px;
-          "
-            ></div>
-            <img
-              src="./assets/img/home/logo.svg"
+        <img
+              src="../../../assets/img/home/brasil.png"
               alt="Logo"
-              style="width: 200px; cursor: pointer"
+              style="width: 115px; cursor: pointer; margin-left: -2%;"
             />
+          <div >
+            <div
+              style="
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                padding: 5px 13px;
+              "
+
+            >
+
             <p
               style="
-                font-size: 16px;
-                font-weight: 600;
+                font-size: 14px;
+                font-weight: 700;
                 font-family: Raleway;
-                text-align: center;
+                text-align: left;
                 margin: 10px 5px 10px;
                 padding: 0 8px;
                 color: #3c3c3f;
+                width: 90%;
               "
             >
               {{ title }}
             </p>
+          </div>
           </div>
         </div>
       </swiper-slide>
     </swiper-container>
   </div>
 
-  <ion-toolbar style="max-width: 400px; border-top: 1px solid #b8b9bc">
+  <ion-toolbar style=" border-top: 1px solid #b8b9bc">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home">
@@ -754,3 +764,32 @@
     </ion-tabs>
   </ion-toolbar>
 </ion-content>
+
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ Initialize Swiper
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script> -->

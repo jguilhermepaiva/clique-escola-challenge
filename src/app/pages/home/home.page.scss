@@ -95,3 +95,9 @@ swiper-slide {
 ion-tab-bar {
   border: 0px solid black;
 }
+
+@media (min-width: 768px) {
+  swiper-container {
+    --slides-per-view:2.08;
+  }
+}
