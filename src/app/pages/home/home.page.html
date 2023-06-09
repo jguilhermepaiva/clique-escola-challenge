@@ -585,189 +585,172 @@
     >
       <swiper-slide>
         <div
-          class="slide3-1"
           style="
             display: flex;
             border-radius: 20px;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
             cursor: pointer;
             height: 136px;
             width: 98%;
           "
+          *ngFor="let title of titleNoticias.slice(0, 1)"
+
         >
           <div>
             <div
               style="
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 width: 225px;
-                padding: 0 13px;
-                margin-top: 15%;
+                padding: 5px 13px;
               "
-            >
-              <p
-                style="
-                  font-size: 14px;
-                  font-weight: 700;
-                  font-family: Raleway;
-                  text-align: left;
-                  color: #fbfdff;
-                  margin: 10px 0;
-                "
-              >
-                Censo Escolar
-              </p>
-            </div>
+            ></div>
+            <img
+              src="./assets/img/home/logo.svg"
+              alt="Logo"
+              style="width: 200px; cursor: pointer"
+            />
             <p
               style="
                 font-size: 16px;
                 font-weight: 600;
                 font-family: Raleway;
-                text-align: left;
-                margin: 0 5px;
+                text-align: center;
+                margin: 10px 5px 10px;
                 padding: 0 8px;
-                color: #fbfdff;
+                color: #3c3c3f;
               "
             >
-              Coleta da 2ª etapa do Censo Escolar 2022 terminará no dia 17/03
+              {{ title }}
             </p>
+
           </div>
         </div>
       </swiper-slide>
       <swiper-slide>
         <div
-          class="slide3-2"
           style="
             display: flex;
             border-radius: 20px;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
             cursor: pointer;
             height: 136px;
             width: 98%;
           "
+          *ngFor="let title of titleNoticias.slice(1, 2)"
         >
-          <div>
+          <div *ngFor="let guid of guidNoticias.slice(1, 2)" >
             <div
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 225px;
-                padding: 0 13px;
-                margin-top: 15%;
-              "
-            >
-              <p
-                style="
-                  font-size: 14px;
-                  font-weight: 700;
-                  font-family: Raleway;
-                  text-align: left;
-                  color: #fbfdff;
-                  margin: 10px 0;
-                "
-              >
-                Fies
-              </p>
-            </div>
+            style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 225px;
+            padding: 5px 13px;
+          "
+            ></div>
+            <img
+              src="./assets/img/home/logo.svg"
+              alt="Logo"
+              style="width: 200px; cursor: pointer"
+            />
             <p
               style="
                 font-size: 16px;
                 font-weight: 600;
                 font-family: Raleway;
-                text-align: left;
-                margin: 0 5px;
+                text-align: center;
+                margin: 10px 5px 10px;
                 padding: 0 8px;
-                color: #fbfdff;
+                color: #3c3c3f;
               "
             >
-              Para o Fies, candidato deve confirmar a conclusão de sua inscrição
+              {{ title }}
             </p>
+
+
           </div>
         </div>
       </swiper-slide>
       <swiper-slide>
         <div
-          class="slide3-3"
           style="
             display: flex;
             border-radius: 20px;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0px 2px 4px 1px rgba(68, 68, 68, 0.35);
             cursor: pointer;
             height: 136px;
             width: 98%;
           "
+          *ngFor="let title of titleNoticias.slice(2, 3)"
         >
           <div>
             <div
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 225px;
-                padding: 0 13px;
-                margin-top: 15%;
-              "
-            >
-              <p
-                style="
-                  font-size: 14px;
-                  font-weight: 700;
-                  font-family: Raleway;
-                  text-align: left;
-                  color: #fbfdff;
-                  margin: 10px 0;
-                "
-              >
-                EBSERH
-              </p>
-            </div>
+            style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 225px;
+            padding: 5px 13px;
+          "
+            ></div>
+            <img
+              src="./assets/img/home/logo.svg"
+              alt="Logo"
+              style="width: 200px; cursor: pointer"
+            />
             <p
               style="
                 font-size: 16px;
                 font-weight: 600;
                 font-family: Raleway;
-                text-align: left;
-                margin: 0 5px;
+                text-align: center;
+                margin: 10px 5px 10px;
                 padding: 0 8px;
-                color: #fbfdff;
+                color: #3c3c3f;
               "
             >
-              Arthur Chioro toma posse como presidente da Ebserh
+              {{ title }}
             </p>
           </div>
         </div>
       </swiper-slide>
     </swiper-container>
   </div>
-</ion-content>
 
-<ion-toolbar style="max-width: 400px; border-top: 1px solid #b8b9bc">
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
-        <ion-icon name="home" style="color: #2670e8"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="search" style="color: #2670e8"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="library">
-        <ion-icon
-          name="color-palette-outline"
-          style="color: #2670e8"
-        ></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="search">
-        <ion-icon name="chatbox-outline" style="color: #2670e8"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="search">
-        <img
-          src="./assets/img/home/person.svg"
-          alt="Logo"
-          style="cursor: pointer"
-        />
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-toolbar>
+  <ion-toolbar style="max-width: 400px; border-top: 1px solid #b8b9bc">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home" style="color: #2670e8"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="search" style="color: #2670e8"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="library">
+          <ion-icon
+            name="color-palette-outline"
+            style="color: #2670e8"
+          ></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <ion-icon name="chatbox-outline" style="color: #2670e8"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <img
+            src="./assets/img/home/person.svg"
+            alt="Logo"
+            style="cursor: pointer"
+          />
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-content>
