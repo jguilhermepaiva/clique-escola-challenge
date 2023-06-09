@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="false" style="height: auto">
+<ion-content [fullscreen]="false" style="height: auto;">
   <ion-content>
     <ion-row
       class="ion-text-left ion-align-items-center"
@@ -22,7 +22,7 @@
         style="cursor: pointer"
       />
     </ion-row>
-    <div *ngIf="noticiaSelecionada">
+    <div *ngIf="noticiaSelecionada" style="padding: 10px">
       <h2>{{ noticiaSelecionada.title }}</h2>
 
     </div>
@@ -34,7 +34,7 @@
   />
 
 
-  <div *ngIf="noticiaSelecionada">
+  <div *ngIf="noticiaSelecionada" style="padding: 10px">
     <div [innerHTML]="noticiaSelecionada.description"></div>
   </div>
     </ion-content>

@@ -32,7 +32,6 @@ export class HomePage {
       this.titleNoticias = data.map((item: any) => item.title);
       this.descriptionNoticias = data.map((item: any) => item.description);
       this.noticiaSelecionada = data[0];
-      this.combinedData = this.titleNoticias.map((title, index) => ({ title, noticia: this.descriptionNoticias[index] }));
 
     });
   }
